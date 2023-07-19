@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Coedit</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Simple Coedit</a>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="p-2 row">
+            <div class="col">
+                <textarea name="input-text" cols="30" rows="10" class="form-control" id="input-text"></textarea>
+            </div>
+        </div>
+        <div class="p-2 row">
+            <div class="col-5">
+                <select name="transformation" id="transformation" class="form-select">
+                    <option selected>Select transformation ...</option>
+                    <option value="Correct grammar">Correct grammar</option>
+                    <option value="Make the tone more assertive">Change the tone to more assertive</option>
+                    <option value="Make the text more formal">Make the text more formal</option>
+                </select>
+            </div>
+            <div class="col-6"></div>
+            <div class="col"><button class="btn btn-primary" id="process" onclick="javascript:process();">Proceed</button></div>
+        </div>
+        <div class="p-2 row" style="display: none;" id="result">
+            <h5>Processed Text</h5>
+            <p id="processed-text"></p>
+        </div>
+    </main>
+</body>
+</html>
